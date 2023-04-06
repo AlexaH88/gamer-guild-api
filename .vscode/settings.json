@@ -23,5 +23,12 @@
    "files.autoSave": "off",
    "workbench.colorTheme": "Nostalgic Sky Prop",
    "terminal.integrated.gpuAcceleration": "canvas",
-   "editor.defaultFormatter": "HookyQR.beautify"
+  "editor.defaultFormatter": "HookyQR.beautify",
+  "prettier.tabWidth": 4,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+  },
+  "indentRainbow.indentSetter": {
+
+  }
 }
