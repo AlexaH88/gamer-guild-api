@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from .models import Post
+from .models import Event
 
 
-class PostSerializer(serializers.ModelSerializer):
+class EventSerializer(serializers.ModelSerializer):
     """
-    Post serializer
+    Event serializer
     """
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
@@ -32,8 +32,8 @@ class PostSerializer(serializers.ModelSerializer):
         return request.user == obj.owner
 
     class Meta:
-        model = Post
+        model = Event
         fields = [
             'id', 'owner', 'created_at', 'updated_at', 'title', 'content',
-            'image', 'video', 'is_owner', 'profile_id', 'profile_image',
+            'image', 'is_owner', 'profile_id', 'profile_image',
         ]
