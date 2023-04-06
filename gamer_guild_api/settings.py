@@ -27,6 +27,44 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+REST_FRAMEWORK = {
+    # authentication
+    'DEFAULT_AUTHENTICATION_CLASSES': [(
+        # uses sessions in development
+        'rest_framework.authentication.SessionAuthentication'
+        if 'DEV' in os.environ
+        # uses tokens in production
+        else 'dj_rest_auth.jwt_auth.JWTCookieAuthentication'
+    )],
+    # pagination
+    'DEFAULT_PAGINATION_CLASS':
+        'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
+    # date time format as 02 Aug 2021 for example
+    'DATETIME_FORMAT': '%d %b %Y'
+}
+
+# render JSON only in production
+if 'DEV' not in os.environ:
+    REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'] = [
+        'rest_framework.renderers.JSONRenderer'
+    ]
+
+REST_USE_JWT = True
+
+JWT_AUTH_SECURE = True
+
+# access token
+JWT_AUTH_COOKIE = 'my-app-auth'
+
+# refresh token
+JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
+
+JWT_AUTH_SAMESITE = 'None'
+
+REST_AUTH_SERIALIZER = {
+    'USER_DETAILS_SERIALIZER': 'gamer_guild_api.serializers.CurrentUserSerializer'
+}
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -52,11 +90,20 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'rest_framework',
+    'rest_framework.authtoken',
+    'dj_rest_auth',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'dj_rest_auth.registration',
 
     'profiles',
     'posts',
     'comments',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
