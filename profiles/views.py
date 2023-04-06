@@ -8,6 +8,9 @@ from .serializers import ProfileSerializer
 
 
 class ProfileList(APIView):
+    """
+    Profile list view
+    """
     def get(self, request):
         profiles = Profile.objects.all()
         serializer = ProfileSerializer(
@@ -17,6 +20,9 @@ class ProfileList(APIView):
 
 
 class ProfileDetail(APIView):
+    """
+    Profile detail view
+    """
     serializer_class = ProfileSerializer
     permission_classes = [IsOwnerOrReadOnly]
 
