@@ -38,3 +38,4 @@ class CommentDetailSerializer(CommentSerializer):
     Comment detail serializer
     """
     post = serializers.ReadOnlyField(source='post.id')
+    event = serializers.ReadOnlyField(source='event.id')
