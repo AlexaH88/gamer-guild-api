@@ -31,7 +31,8 @@ class EventList(generics.ListCreateAPIView):
     # for SearchFilter
     search_fields = [
         'owner__username',
-        'title'
+        'title',
+        'content'
     ]
     # for DjangoFilterBackend
     filterset_fields = [
