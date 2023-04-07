@@ -1,7 +1,6 @@
 from rest_framework import status, permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework import status
 from django.http import Http404
 from gamer_guild_api.permissions import IsOwnerOrReadOnly
 from .models import Post
