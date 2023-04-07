@@ -6,7 +6,7 @@ from .serializers import LikeSerializer
 
 class LikeList(generics.ListCreateAPIView):
     """
-    Like list view
+    List likes or create a like if logged in.
     """
     serializer_class = LikeSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
@@ -20,7 +20,7 @@ class LikeList(generics.ListCreateAPIView):
 # update API View not included as likes don't need to be updated
 class LikeDetail(generics.RetrieveDestroyAPIView):
     """
-    Like detail view
+    Retrieve a like or delete it by id if you own it.
     """
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = LikeSerializer

@@ -6,7 +6,7 @@ from .serializers import AttendeeSerializer
 
 class AttendeeList(generics.ListCreateAPIView):
     """
-    Attendee list view
+    List attendees or create an attendace if logged in.
     """
     serializer_class = AttendeeSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
@@ -17,10 +17,10 @@ class AttendeeList(generics.ListCreateAPIView):
         serializer.save(owner=self.request.user)
 
 
-# update API View not included as attends don't need to be updated
+# update API View not included as attendances don't need to be updated
 class AttendeeDetail(generics.RetrieveDestroyAPIView):
     """
-    Attendee detail view
+    Retrieve an attendance or delete it by id if you own it.
     """
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = AttendeeSerializer

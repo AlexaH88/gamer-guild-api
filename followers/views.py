@@ -6,7 +6,10 @@ from .serializers import FollowerSerializer
 
 class FollowerList(generics.ListCreateAPIView):
     """
-    Follower list view
+    List all followers, i.e. all instances of a user
+    following another user
+    Create a follower, i.e. follow a user if logged in
+    Perform_create: associate the current logged in user with a follower
     """
     serializer_class = FollowerSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
@@ -18,7 +21,9 @@ class FollowerList(generics.ListCreateAPIView):
 
 class FollowerDetail(generics.RetrieveDestroyAPIView):
     """
-    Follower detail view
+    Retrieve a follower
+    No Update view, as we either follow or unfollow users
+    Destroy a follower, i.e. unfollow someone if owner
     """
     serializer_class = FollowerSerializer
     permission_classes = [IsOwnerOrReadOnly]
