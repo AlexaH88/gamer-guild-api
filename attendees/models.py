@@ -9,7 +9,7 @@ class Attend(models.Model):
     """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     event = models.ForeignKey(
-        Event, on_delete=models.CASCADE, related_name='attendances'
+        Event, on_delete=models.CASCADE, related_name='event_attendees'
         )
     created_at = models.DateTimeField(auto_now_add=True)
 

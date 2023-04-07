@@ -10,6 +10,9 @@ class EventSerializer(serializers.ModelSerializer):
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
+    comments_count = serializers.ReadOnlyField()
+    likes_count = serializers.ReadOnlyField()
+    attendees_count = serializers.ReadOnlyField()
 
     def validate_image(self, value):
         # check for 2mb file size limit
@@ -36,4 +39,5 @@ class EventSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'owner', 'created_at', 'updated_at', 'title', 'content',
             'image', 'is_owner', 'profile_id', 'profile_image',
+            'comments_count', 'likes_count', 'attendees_count',
         ]
