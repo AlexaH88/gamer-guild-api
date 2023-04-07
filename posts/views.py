@@ -37,8 +37,6 @@ class PostList(generics.ListCreateAPIView):
     filterset_fields = [
         # filter posts from followers
         'owner__followed__owner__profile',
-        # filter liked posts
-        'post_likes__owner__profile',
         # filter user posts
         'owner__profile'
     ]

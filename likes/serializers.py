@@ -12,7 +12,7 @@ class LikeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Like
         fields = [
-            'id', 'owner', 'post', 'created_at'
+            'id', 'owner', 'post', 'event', 'created_at'
         ]
 
     # check for duplicate like

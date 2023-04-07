@@ -10,11 +10,11 @@ class Comment(models.Model):
     """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(
-        Post, on_delete=models.CASCADE, blank=True,
-        related_name='post_comments'
+        Post, on_delete=models.CASCADE, related_name='post_comments'
     )
     event = models.ForeignKey(
-        Event, on_delete=models.CASCADE, blank=True, default=1
+        Event, on_delete=models.CASCADE, related_name='event_comments',
+        default=1
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
