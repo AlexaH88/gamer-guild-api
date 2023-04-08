@@ -16,21 +16,8 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
 
 -   ### ***User stories***
 
-    <!-- -   #### First Time Visitor Goals
-
-        1. As a First Tiem Visitor I can use a search bar on the homepage so that I can easily find the song I'm looking for.
-
-    -   #### Returning Visitor Goals
-
-        1. As a Returning Visitor I can sign up for an account so that I can create, edit and delete lyrics.
-        2. As a Returning Visitor I can login to an account so that I can access my songs as a returning user.
-        3. As a Returning Visitor I can logout of an account so that I remove access to anyone else using the computer
-
-    -   #### Frequent User Goals
-
-        1. As a Frequent User (Site User / Site Admin) I can create song lyrics so that other users can find the lyrics to their favourite songs.
-        2. As a Frequent User (Site User / Site Admin) I can edit song lyrics that I've created so that I can modify the content if needed.
-        3. As a Frequent User (Site User / Site Admin) I can delete song lyrics that I've created so that I can remove my contribution if needed. -->
+    - In order to fulfill the [User Stories](https://github.com/users/AlexaH88/projects/5) created for this portfolio project, relevant apps and models were created. The following user stories relied on the API specifically:
+    ![API User Stories](./docs/readme/images/ux/user_stories.png)
 
 -   ### ***Entity Relationship Diagram***
 
@@ -47,7 +34,7 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
         - Attend
 
     -   Entity Relationship Diagram:
-        ![Entity Relationship Diagram](./docs/readme/images/design/entity_relationship_diagram.png)
+        ![Entity Relationship Diagram](./docs/readme/images/ux/entity_relationship_diagram.png)
 
 
 ## __Technologies Used__
@@ -153,30 +140,12 @@ The site is now live and operational
 
 ### ***Code***
 
-<!-- - The following were used as references to help with writing the HTML, CSS, JavaScript and Python code:
-  - [Code Institute LMS](https://learn.codeinstitute.net/ci_program/diplomainsoftwaredevelopmentecommerce), in particular the [CI I Think Therefore I Blog Walkthrough](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/)
+- The following were used as references to help with writing the HTML, CSS, JavaScript and Python code:
+  - [Code Institute LMS](https://learn.codeinstitute.net/ci_program/diplomainsoftwaredevelopmentadvancedfrontend), in particular the [Django Rest Framework Walkthrough](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DRF+2021_T1/courseware/f775d54df4da44d18309888b3fe884f7/bc5fbada70104d489aa0363a03d8bda8/)
   - [W3Schools](https://www.w3schools.com/) 
   - [Stack Overflow](https://stackoverflow.com/)
   - [MDN Web Docs](https://developer.mozilla.org/en-US/)
-  - [Django Documentation](https://docs.djangoproject.com/en/4.1/)
-
-- The hero image full background cover was taken from [Nicolas Lule](https://nicolaslule.com/responsive-full-width-hero-image-using-flex/) and adapted.
-
-- The Search Bar functionality was taken from [Codemy](https://www.youtube.com/watch?v=AGtae4L5BbI) and adapted. 
-
-- The alert messages close buttons were taken from [W3Schools](https://www.w3schools.com/howto/howto_js_alert.asp) and adapted.
-
-- The jukebox animation on the Song Lyrics page was taken from and inspired by [CSS Tricks](https://css-tricks.com/css-only-infinite-and-circular-image-slider/) and adapted.
-
-- The code for the scroll effect on the lyrics on the Song Lyrics page and the songs throughout the app when there is a lot of data was taken from [W3Schools](https://www.w3schools.com/cssref/pr_scroll-behavior.php) and adapted. 
-
-- The Delete Song form view and templates were taken from [OpenClassrooms](https://openclassrooms.com/fr/courses/6967196-create-a-web-application-with-django/7349788-delete-objects-safely-with-user-confirmation) and adapted.
-
-- The slug being automatically created from the song title was taken from [AppsLoveWorld](https://www.appsloveworld.com/django/100/279/pre-populate-slug-field-into-a-form-field-of-a-django-site) and adapted.
-
-- The input fields when adding or editing a song automatically being capitalised were taken from [LearnPython](https://learnpython.com/blog/uppercase-letter-python/) and [Google Groups](https://groups.google.com/g/django-users/c/gbU-pfCgCL8?pli=1) respectively and adapted.
-
-- The favicon code was taken from [W3Schools](https://www.w3schools.com/), specifically from [HTML Favicon](https://www.w3schools.com/html/html_favicon.asp) and adapted. -->
+  - [Django Rest Framework Documentation](https://www.django-rest-framework.org/)
 
 ### ***Content***
 
