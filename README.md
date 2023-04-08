@@ -69,34 +69,109 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
 ### ***Python Testing***
 
 -   [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the Python code in this project. All code passed without errors, except `settings.py` and `env.py` which showed E501 'line too long' warnings.
-    ![Results settings.py](docs/readme/images/testing/python_testing_error_settings.png)
-    ![Results env.py](docs/readme/images/testing/python_testing_error_env.png)
+    ![Results settings.py](./docs/readme/images/testing/python_testing_error_settings.png)
+    ![Results env.py](./docs/readme/images/testing/python_testing_error_env.png)
 
 ### ***Manual Testing***
 
-<!-- - Manual testing was performed app-wide to ensure a smooth and positive user experience. 
+- Manual testing was performed throughout development, ensuring the database was being updated as expected when creating, reading, updating or deleting data, where appropriate.
 
-- Consistent testing was carried out to ensure there was a logical flow when using the app, and that user's expectations for where links would take them, and what would follow user actions were respected.
-
-- Alert messages are displayed when a user has completed an action, to explain why they are not seeing any data, or if input is incorrect or required:
-  ![Signup Success Message](docs/readme/images/testing/messages-sign-up-successful.png)
-  ![Signup Error Message](docs/readme/images/testing/messages-signup-passwords-not-matching.png)
-  ![Login Success Message](docs/readme/images/testing/messages-login-successful.png)
-  ![Login Error Message](docs/readme/images/testing/messages-login-passwords-not-matching.png)
-  ![Logout Success Message](docs/readme/images/testing/messages-sign-up-successful.png)
-  ![Input Required Song Search Message](docs/readme/images/testing/messages-input-required-song-search.png)
-  ![Input Required Song Search Message](docs/readme/images/testing/messages-input-required-add-song.png)
-  ![Add Song Success Message](docs/readme/images/testing/messages-song-add-successful.png)
-  ![Edit Song Success Message](docs/readme/images/testing/messages-song-edit-successful.png)
-  ![Delete Song Success Message](docs/readme/images/testing/messages-song-edit-successful.png)
-  ![Same Title Error Message](docs/readme/images/testing/messages-same-title-error.png) -->
+#### **Attendees App**
+- List View (Read, Create if logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_attendees_list_logged_in.png)
+<!-- - List View (Read if not logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_not_logged_in.png) -->
+<!-- - Detail View (Read, Update, Delete if owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png) -->
+- Detail View (Read if not owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_attendees_detail_not_owner.png)
+#### **Chats App**
+<!-- - List View (Read if logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png)
+- List View (Read if not logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_not_logged_in.png)
+- Detail View (Read, Update, Delete if owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png)
+- Detail View (Read if not owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_owner.png) -->
+#### **Comments App**
+<!-- - List View (Read if logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png)
+- List View (Read if not logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_not_logged_in.png)
+- Detail View (Read, Update, Delete if owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png) -->
+- Detail View (Read if not owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_comments_detail_not_owner.png)
+#### **Events App**
+<!-- - List View (Read if logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png)
+- List View (Read if not logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_not_logged_in.png)
+- Detail View (Read, Update, Delete if owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png) -->
+- Detail View (Read if not owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_pevents_detail_not_owner.png)
+#### **Followers App**
+- List View (Read, Create if logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_followers_list_logged_in.png)
+<!-- - List View (Read if not logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_not_logged_in.png) -->
+- Detail View (Read, Delete if owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_followers_detail_owner.png)
+<!-- - Detail View (Read if not owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_owner.png) -->
+#### **Likes App**
+<!-- - List View (Read if logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png)
+- List View (Read if not logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_not_logged_in.png)
+- Detail View (Read, Update, Delete if owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png) -->
+- Detail View (Read if not owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_likes_detail_not_owner.png)
+#### **Posts App**
+- List View (Read, Create if logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_posts_list_logged_in.png)
+<!-- - List View (Read if not logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_not_logged_in.png) -->
+- Detail View (Read, Update, Delete if owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_posts_detail_owner.png)
+<!-- - Detail View (Read if not owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_owner.png) -->
+#### **Profiles App**
+- List View (Read if logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png)
+- List View (Read if not logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_not_logged_in.png)
+- Detail View (Read, Update, Delete if owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png)
+- Detail View (Read if not owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_owner.png)
+#### **Responses App**
+<!-- - List View (Read if logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png)
+- List View (Read if not logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_not_logged_in.png)
+- Detail View (Read, Update, Delete if owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png)
+- Detail View (Read if not owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_owner.png) -->
+#### **Socials App**
+<!-- - List View (Read if logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png)
+- List View (Read if not logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_not_logged_in.png)
+- Detail View (Read, Update, Delete if owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png)
+- Detail View (Read if not owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_owner.png) -->
 
 
 [//]: <> (Deployment section taken from Dave Horrocks, and credited in the Content section of the Credits)
+## __Deployment__
 
-## Deployment
-
-### Heroku
+### ***Heroku***
 
 1. Navigate to your [Heroku dashboard](https://dashboard.heroku.com/apps)
 2. Click "New" and select "Create new app".  
