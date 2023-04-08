@@ -79,12 +79,14 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
 #### **Attendees App**
 - List View (Read, Create if logged in):
     - ![List View](./docs/readme/images/testing/manual_testing_attendees_list_logged_in.png)
-<!-- - List View (Read if not logged in):
-    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_not_logged_in.png) -->
-<!-- - Detail View (Read, Update, Delete if owner):
-    - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png) -->
+- List View (Read if not logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_attendees_list_not_logged_in.png)
+- Detail View (Read, Update, Delete if owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_attendees_detail_owner.png)
 - Detail View (Read if not owner):
     - ![Detail View](./docs/readme/images/testing/manual_testing_attendees_detail_not_owner.png)
+- Detail View (Read if not logged in):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_attendees_detail_not_logged_in.png)
 #### **Chats App**
 <!-- - List View (Read if logged in):
     - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png)
@@ -94,6 +96,8 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
     - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png)
 - Detail View (Read if not owner):
     - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_owner.png) -->
+<!-- - Detail View (Read if not logged in):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_attendees_detail_not_logged_in.png) -->
 #### **Comments App**
 <!-- - List View (Read if logged in):
     - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png)
@@ -103,6 +107,8 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
     - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png) -->
 - Detail View (Read if not owner):
     - ![Detail View](./docs/readme/images/testing/manual_testing_comments_detail_not_owner.png)
+<!-- - Detail View (Read if not logged in):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_attendees_detail_not_logged_in.png) -->
 #### **Events App**
 <!-- - List View (Read if logged in):
     - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png)
@@ -112,24 +118,30 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
     - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png) -->
 - Detail View (Read if not owner):
     - ![Detail View](./docs/readme/images/testing/manual_testing_pevents_detail_not_owner.png)
+<!-- - Detail View (Read if not logged in):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_attendees_detail_not_logged_in.png) -->
 #### **Followers App**
 - List View (Read, Create if logged in):
     - ![List View](./docs/readme/images/testing/manual_testing_followers_list_logged_in.png)
-<!-- - List View (Read if not logged in):
-    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_not_logged_in.png) -->
+- List View (Read if not logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_followers_list_not_logged_in.png)
 - Detail View (Read, Delete if owner):
     - ![Detail View](./docs/readme/images/testing/manual_testing_followers_detail_owner.png)
-<!-- - Detail View (Read if not owner):
-    - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_owner.png) -->
+- Detail View (Read if not owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_followers_detail_not_owner.png)
+<!-- - Detail View (Read if not logged in):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_attendees_detail_not_logged_in.png) -->
 #### **Likes App**
-<!-- - List View (Read if logged in):
-    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png)
+- List View (Read if logged in):
+    - ![List View](./docs/readme/images/testing/manual_testing_likes_list_logged_in.png)
 - List View (Read if not logged in):
-    - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_not_logged_in.png)
-- Detail View (Read, Update, Delete if owner):
-    - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png) -->
+    - ![List View](./docs/readme/images/testing/manual_testing_likes_list_not_logged_in.png)
+- Detail View (Read, Delete if owner):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_likes_detail_owner.png)
 - Detail View (Read if not owner):
     - ![Detail View](./docs/readme/images/testing/manual_testing_likes_detail_not_owner.png)
+<!-- - Detail View (Read if not logged in):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_attendees_detail_not_logged_in.png) -->
 #### **Posts App**
 - List View (Read, Create if logged in):
     - ![List View](./docs/readme/images/testing/manual_testing_posts_list_logged_in.png)
@@ -139,6 +151,8 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
     - ![Detail View](./docs/readme/images/testing/manual_testing_posts_detail_owner.png)
 <!-- - Detail View (Read if not owner):
     - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_owner.png) -->
+<!-- - Detail View (Read if not logged in):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_attendees_detail_not_logged_in.png) -->
 #### **Profiles App**
 - List View (Read if logged in):
     - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png)
@@ -148,6 +162,8 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
     - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png)
 - Detail View (Read if not owner):
     - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_owner.png)
+<!-- - Detail View (Read if not logged in):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_attendees_detail_not_logged_in.png) -->
 #### **Responses App**
 <!-- - List View (Read if logged in):
     - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png)
@@ -157,6 +173,8 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
     - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png)
 - Detail View (Read if not owner):
     - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_owner.png) -->
+<!-- - Detail View (Read if not logged in):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_attendees_detail_not_logged_in.png) -->
 #### **Socials App**
 <!-- - List View (Read if logged in):
     - ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png)
@@ -166,6 +184,8 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
     - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png)
 - Detail View (Read if not owner):
     - ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_owner.png) -->
+<!-- - Detail View (Read if not logged in):
+    - ![Detail View](./docs/readme/images/testing/manual_testing_attendees_detail_not_logged_in.png) -->
 
 
 [//]: <> (Deployment section taken from Dave Horrocks, and credited in the Content section of the Credits)
