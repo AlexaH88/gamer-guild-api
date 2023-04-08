@@ -68,10 +68,9 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
 
 ### ***Python Testing***
 
-<!-- -   [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the Python code in this project. All code passed without errors, except `settings.py` and `env.py` which showed E501 'line too long' warnings.
-    ![Results Python Songs Views](docs/readme/images/testing/validator-views-py.png)
-    ![Results Python Settings](docs/readme/images/testing/validator-settings-py.png)
-    ![Results Python Environment Variables](docs/readme/images/testing/validator-env-py.png) -->
+-   [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the Python code in this project. All code passed without errors, except `settings.py` and `env.py` which showed E501 'line too long' warnings.
+    ![Results settings.py](docs/readme/images/testing/python_testing_error_settings.png)
+    ![Results env.py](docs/readme/images/testing/python_testing_error_env.png)
 
 ### ***Manual Testing***
 
