@@ -1,108 +1,205 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center">Gamer Guild API</h1>
 
-Welcome Alexa Hendry,
+The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/AlexaH88/gamer-guild) React app. The API includes the following apps, allowing for a rich database and a versatile front-end application:
+- profiles
+- socials
+- followers
+- chats
+- posts
+- events
+- responses
+- comments
+- likes
+- attends
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## __User Experience (UX)__
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+-   ### ***User stories***
 
-## Gitpod Reminders
+    <!-- -   #### First Time Visitor Goals
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+        1. As a First Tiem Visitor I can use a search bar on the homepage so that I can easily find the song I'm looking for.
 
-`python3 -m http.server`
+    -   #### Returning Visitor Goals
 
-A blue button should appear to click: _Make Public_,
+        1. As a Returning Visitor I can sign up for an account so that I can create, edit and delete lyrics.
+        2. As a Returning Visitor I can login to an account so that I can access my songs as a returning user.
+        3. As a Returning Visitor I can logout of an account so that I remove access to anyone else using the computer
 
-Another blue button should appear to click: _Open Browser_.
+    -   #### Frequent User Goals
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+        1. As a Frequent User (Site User / Site Admin) I can create song lyrics so that other users can find the lyrics to their favourite songs.
+        2. As a Frequent User (Site User / Site Admin) I can edit song lyrics that I've created so that I can modify the content if needed.
+        3. As a Frequent User (Site User / Site Admin) I can delete song lyrics that I've created so that I can remove my contribution if needed. -->
 
-A blue button should appear to click: _Make Public_,
+-   ### ***Entity Relationship Diagram***
 
-Another blue button should appear to click: _Open Browser_.
+    - The following Entity Relationship Diagram was created to show the models used. The in-built Django User model was used for this project, and the following custom models were created:
+        - Profile
+        - Social
+        - Follower
+        - Chat
+        - Post
+        - Event
+        - Response
+        - Comment
+        - Like
+        - Attend
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+    -   Entity Relationship Diagram:
+        ![Entity Relationship Diagram](./docs/readme/images/design/entity_relationship_diagram.png)
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## __Technologies Used__
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### ***Languages Used***
 
-------
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-## Release History
+### ***Frameworks, Libraries & Programs Used***
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+1. [Django Rest Framework:](https://www.django-rest-framework.org/)
+    - The Django web framework was used to create the web API.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+1. [PostgreSQL:](https://en.wikipedia.org/wiki/PostgreSQL)
+    - PostgreSQL was used as the object-relational database system.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+1. [ElephantSQL:](https://www.elephantsql.com/)
+    - ElephantSQL was used to host the database.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+1. [Git:](https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+1. [GitHub:](https://github.com/)
+    - GitHub is used to store the projects code after being pushed from Git.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+1. [Heroku:](https://heroku.com/)
+    - Heroku was used for the deployed application.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## __Testing__
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### ***Python Testing***
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+<!-- -   [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the Python code in this project. All code passed without errors, except `settings.py` and `env.py` which showed E501 'line too long' warnings.
+    ![Results Python Songs Views](docs/readme/images/testing/validator-views-py.png)
+    ![Results Python Settings](docs/readme/images/testing/validator-settings-py.png)
+    ![Results Python Environment Variables](docs/readme/images/testing/validator-env-py.png) -->
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### ***Manual Testing***
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+<!-- - Manual testing was performed app-wide to ensure a smooth and positive user experience. 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- Consistent testing was carried out to ensure there was a logical flow when using the app, and that user's expectations for where links would take them, and what would follow user actions were respected.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- Alert messages are displayed when a user has completed an action, to explain why they are not seeing any data, or if input is incorrect or required:
+  ![Signup Success Message](docs/readme/images/testing/messages-sign-up-successful.png)
+  ![Signup Error Message](docs/readme/images/testing/messages-signup-passwords-not-matching.png)
+  ![Login Success Message](docs/readme/images/testing/messages-login-successful.png)
+  ![Login Error Message](docs/readme/images/testing/messages-login-passwords-not-matching.png)
+  ![Logout Success Message](docs/readme/images/testing/messages-sign-up-successful.png)
+  ![Input Required Song Search Message](docs/readme/images/testing/messages-input-required-song-search.png)
+  ![Input Required Song Search Message](docs/readme/images/testing/messages-input-required-add-song.png)
+  ![Add Song Success Message](docs/readme/images/testing/messages-song-add-successful.png)
+  ![Edit Song Success Message](docs/readme/images/testing/messages-song-edit-successful.png)
+  ![Delete Song Success Message](docs/readme/images/testing/messages-song-edit-successful.png)
+  ![Same Title Error Message](docs/readme/images/testing/messages-same-title-error.png) -->
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
+[//]: <> (Deployment section taken from Dave Horrocks, and credited in the Content section of the Credits)
 
-## FAQ about the uptime script
+## Deployment
 
-**Why have you added this script?**
+### Heroku
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+1. Navigate to your [Heroku dashboard](https://dashboard.heroku.com/apps)
+2. Click "New" and select "Create new app".  
+  ![New heroku](./docs/readme/images/deployment/heroku-new.png)
+3. Input a meaningful name for your app and choose the region best suited to
+  your location.  
+  ![Create new app](./docs/readme/images/deployment/heroku-create.png)
+4. Select "Settings" from the tabs.  
+  ![Settings tab](./docs/readme/images/deployment/heroku-settings.png)
+5. Click "Reveal Config Vars".  
+ ![Config vars button](./docs/readme/images/deployment/heroku-config-vars.png)
+6. Input all key-value pairs as necessary from the `.env` file. **Ensure DEBUG
+   and DEVELOPMENT are not included**.
+   ![Config vars](./docs/readme/images/deployment/heroku-config-var.png)
+7. Click "Add buildpack".  
+ ![Add buildpack](./docs/readme/images/deployment/heroku-add-buildpacks.png)
+8. Add "python" from the list or search if necessary, remember to
+ click save.  
+ ![Select buildpacks](./docs/readme/images/deployment/heroku-select-buildpacks.png)
+9. Select "Deploy" from the tabs.  
+![Settings tab](./docs/readme/images/deployment/heroku-deploy-tab.png)
+10. Select "GitHub - Connect to GitHub" from deployment methods.  
+ ![Select GitHub](./docs/readme/images/deployment/heroku-select-github.png)
+11. Click "Connect to GitHub" in the created section.  
+ ![Connect to GitHub](./docs/readme/images/deployment/heroku-connect-github.png)
+12. Search for the GitHub repository by name.  
+13. Click to connect to the relevant repo.
+14. Either click `Enable Automatic Deploys` for automatic deploys or `Deploy
+ Branch` to deploy manually. Manually deployed branches will need
+ re-deploying each time the repo is updated.  
+ ![Heroku deploy branch](./docs/readme/images/deployment/heroku-deploy-branch.png)
+15. Click `View` to view the deployed site.  
+    ![Heroku view](./docs/readme/images/deployment/heroku-view.png)
+16. The live site can also be accessed from your repo in GitHub from the
+    environments section of the repo.
 
-**How will this affect me?**
+The site is now live and operational
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+## __Credits__
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### ***Code***
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+<!-- - The following were used as references to help with writing the HTML, CSS, JavaScript and Python code:
+  - [Code Institute LMS](https://learn.codeinstitute.net/ci_program/diplomainsoftwaredevelopmentecommerce), in particular the [CI I Think Therefore I Blog Walkthrough](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/)
+  - [W3Schools](https://www.w3schools.com/) 
+  - [Stack Overflow](https://stackoverflow.com/)
+  - [MDN Web Docs](https://developer.mozilla.org/en-US/)
+  - [Django Documentation](https://docs.djangoproject.com/en/4.1/)
 
-**So….?**
+- The hero image full background cover was taken from [Nicolas Lule](https://nicolaslule.com/responsive-full-width-hero-image-using-flex/) and adapted.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- The Search Bar functionality was taken from [Codemy](https://www.youtube.com/watch?v=AGtae4L5BbI) and adapted. 
 
-**Can I opt out?**
+- The alert messages close buttons were taken from [W3Schools](https://www.w3schools.com/howto/howto_js_alert.asp) and adapted.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- The jukebox animation on the Song Lyrics page was taken from and inspired by [CSS Tricks](https://css-tricks.com/css-only-infinite-and-circular-image-slider/) and adapted.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+- The code for the scroll effect on the lyrics on the Song Lyrics page and the songs throughout the app when there is a lot of data was taken from [W3Schools](https://www.w3schools.com/cssref/pr_scroll-behavior.php) and adapted. 
 
-**Anything more?**
+- The Delete Song form view and templates were taken from [OpenClassrooms](https://openclassrooms.com/fr/courses/6967196-create-a-web-application-with-django/7349788-delete-objects-safely-with-user-confirmation) and adapted.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- The slug being automatically created from the song title was taken from [AppsLoveWorld](https://www.appsloveworld.com/django/100/279/pre-populate-slug-field-into-a-form-field-of-a-django-site) and adapted.
 
----
+- The input fields when adding or editing a song automatically being capitalised were taken from [LearnPython](https://learnpython.com/blog/uppercase-letter-python/) and [Google Groups](https://groups.google.com/g/django-users/c/gbU-pfCgCL8?pli=1) respectively and adapted.
 
-Happy coding!
+- The favicon code was taken from [W3Schools](https://www.w3schools.com/), specifically from [HTML Favicon](https://www.w3schools.com/html/html_favicon.asp) and adapted. -->
+
+### ***Content***
+
+- The Deployment section in the README was taken from the masterful [Dave Horrocks](https://github.com/DaveyJH), who put it so much better than I could! 
+
+### ***Acknowledgements***
+
+Massive thanks to: 
+
+- My mentor, [Lauren-Nicole Popich](https://github.com/CluelessBiker), for guiding me and giving me helpful feedback and advice - and for giving me confidence when I didn't believe in myself!
+
+- My fellow Code Institute students and friends for their help, generous feedback, and incredible knowledge:
+  
+  - [Abi Harrison](https://github.com/Abibubble)
+  - [Dave Horrocks](https://github.com/DaveyJH)
+  - [Emanuel Silva](https://github.com/manni8436)
+  - [Kera Cudmore](https://github.com/kera-cudmore)
+  - [Megan Vella](https://github.com/Medusas71)
+  - [Monika Hrda](https://github.com/monika-hrda)
+  - [Natalie Alexander](https://github.com/natalie-kate)
+  - [Sandra Atino](https://github.com/Atinos31)
+  - [Suzy Bennett](https://github.com/suzybee1987)
+
+- Tutor Support, Student Care and the Slack Community at [Code Institute](https://codeinstitute.net/global/) for their support.
+
+- And last but not least, my fiancé [Antoine Masson](https://www.linkedin.com/in/antoine-masson-55b65094/) for helping me through the stressful moments and for supporting us financially while I make this big career change. 
