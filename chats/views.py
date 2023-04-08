@@ -21,13 +21,13 @@ class ChatList(generics.ListCreateAPIView):
     # for SearchFilter
     search_fields = [
         'owner__username',
-        'chatted__username',
+        'chattee__username',
         'content'
     ]
     # for DjangoFilterBackend
     filterset_fields = [
         # filter chats from followers
-        'owner__chatted__owner__profile',
+        'owner__chattee__owner__profile',
         # filter user chats
         'owner__profile'
     ]
