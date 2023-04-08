@@ -1,24 +1,18 @@
 from django.contrib.humanize.templatetags.humanize import naturaltime
 from rest_framework import serializers
-from .models import Chat
+from .models import Response
 
 
-class ChatSerializer(serializers.ModelSerializer):
+class ResponseSerializer(serializers.ModelSerializer):
     """
-    Chat serializer
+    Response serializer
     """
     owner = serializers.ReadOnlyField(source='owner.username')
-    chattee_name = serializers.ReadOnlyField(source='chattee.username')
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
-    chattee_profile_id = serializers.ReadOnlyField(source='chattee.profile.id')
-    chattee_profile_image = serializers.ReadOnlyField(
-        source='chattee.profile.image.url'
-    )
     created_at = serializers.SerializerMethodField()
     updated_at = serializers.SerializerMethodField()
-    responses_count = serializers.ReadOnlyField()
 
     def get_is_owner(self, obj):
         request = self.context['request']
@@ -32,10 +26,15 @@ class ChatSerializer(serializers.ModelSerializer):
         return naturaltime(obj.updated_at)
 
     class Meta:
-        model = Chat
+        model = Response
         fields = [
-            'id', 'owner', 'chattee', 'chattee_name', 'content',
-            'created_at', 'is_owner', 'profile_id', 'profile_image',
-            'chattee_profile_id', 'chattee_profile_image', 'created_at',
-            'updated_at', 'responses_count',
+            'id', 'owner', 'chat', 'created_at', 'updated_at',
+            'content', 'is_owner', 'profile_id', 'profile_image'
         ]
+
+
+class ResponseDetailSerializer(ResponseSerializer):
+    """
+    Response detail serializer
+    """
+    chat = serializers.ReadOnlyField(source='chat.id')

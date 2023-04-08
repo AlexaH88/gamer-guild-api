@@ -19,4 +19,5 @@ urlpatterns = [
     path('', include('attendees.urls')),
     path('', include('socials.urls')),
     path('', include('chats.urls')),
+    path('', include('responses.urls')),
 ]

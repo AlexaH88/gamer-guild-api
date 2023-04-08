@@ -113,6 +113,7 @@ INSTALLED_APPS = [
     'attendees',
     'socials',
     'chats',
+    'responses',
 ]
 
 SITE_ID = 1

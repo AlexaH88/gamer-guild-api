@@ -1,6 +1,7 @@
 from rest_framework import generics, permissions, filters
-from gamer_guild_api.permissions import IsOwner
+from gamer_guild_api.permissions import IsOwner, IsOwnerOrReadOnly
 from django_filters.rest_framework import DjangoFilterBackend
+from django.db.models import Count
 from .models import Chat
 from .serializers import ChatSerializer
 
@@ -13,7 +14,9 @@ class ChatList(generics.ListCreateAPIView):
     """
     permission_classes = [IsOwner]
     serializer_class = ChatSerializer
-    queryset = Chat.objects.all()
+    queryset = Chat.objects.annotate(
+        responses_count=Count('chat_response', distinct=True),
+    ).order_by('-created_at')
     filter_backends = [
         filters.SearchFilter,
         DjangoFilterBackend
@@ -41,3 +44,14 @@ class ChatList(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
+
+
+class ChatDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Retrieve a chat and edit or delete it if you own it.
+    """
+    serializer_class = ChatSerializer
+    permission_classes = [IsOwnerOrReadOnly]
+    queryset = Chat.objects.annotate(
+        responses_count=Count('chat_response', distinct=True)
+    ).order_by('-created_at')
