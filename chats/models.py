@@ -7,10 +7,10 @@ class Chat(models.Model):
     Chat model, related to Users
     """
     owner = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='chatter'
+        User, on_delete=models.CASCADE, related_name='sender'
         )
     receiver = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='chattee', default=1
+        User, on_delete=models.CASCADE, related_name='receiver', default=1
         )
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)

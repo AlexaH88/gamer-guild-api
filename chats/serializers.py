@@ -8,12 +8,7 @@ class ChatSerializer(serializers.ModelSerializer):
     """
     Chat serializer
     """
-    # owner = serializers.SlugRelatedField(
-    #     many=False, slug_field='username', queryset=User.objects.all()
-    # )
-    owner = serializers.ReadOnlyField(
-        source='owner.username'
-    )
+    owner = serializers.ReadOnlyField(source='owner.username')
     receiver = serializers.SlugRelatedField(
         many=False, slug_field='username', queryset=User.objects.all()
     )
