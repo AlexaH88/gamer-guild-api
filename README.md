@@ -2,7 +2,6 @@
 
 The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/AlexaH88/gamer-guild) React app. The API includes the following apps, allowing for a rich database and a versatile front-end application:
 - profiles
-- socials
 - followers
 - chats
 - posts
@@ -23,7 +22,6 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
 
     - The following Entity Relationship Diagram was created to show the models used. The in-built Django User model was used for this project, and the following custom models were created:
         - Profile
-        - Social
         - Follower
         - Chat
         - Post
@@ -175,17 +173,6 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
     ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_owner.png) -->
 <!-- - Detail View (Read if not logged in):
     ![Detail View](./docs/readme/images/testing/manual_testing_responses_detail_not_logged_in.png) -->
-#### **Socials App**
-<!-- - List View (Read, Create if logged in):
-    ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png) -->
-- List View (Read if not logged in):
-    ![List View](./docs/readme/images/testing/manual_testing_socials_list_not_logged_in.png)
-- Detail View (Read, Update, Delete if owner):
-    ![Detail View](./docs/readme/images/testing/manual_testing_socials_detail_owner.png)
-- Detail View (Read if not owner):
-    ![Detail View](./docs/readme/images/testing/manual_testing_socials_detail_not_owner.png)
-- Detail View (Read if not logged in):
-    ![Detail View](./docs/readme/images/testing/manual_testing_socials_detail_not_logged_in.png)
 
 
 [//]: <> (Deployment section taken from Dave Horrocks, and credited in the Content section of the Credits)
