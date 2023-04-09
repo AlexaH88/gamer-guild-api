@@ -112,7 +112,6 @@ INSTALLED_APPS = [
     'followers',
     'events',
     'attendees',
-    'socials',
     'chats',
     'responses',
 ]
