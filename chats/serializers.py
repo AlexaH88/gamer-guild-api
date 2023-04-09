@@ -15,12 +15,6 @@ class ChatSerializer(serializers.ModelSerializer):
     is_owner = serializers.SerializerMethodField()
     owner_id = serializers.ReadOnlyField(source='owner.profile.id')
     owner_image = serializers.ReadOnlyField(source='owner.profile.image.url')
-    receiver_id = serializers.ReadOnlyField(
-        source='receiver.profile.id'
-    )
-    receiver_image = serializers.ReadOnlyField(
-        source='receiver.profile.image.url'
-    )
     created_at = serializers.SerializerMethodField()
 
     def get_is_owner(self, obj):
@@ -35,6 +29,5 @@ class ChatSerializer(serializers.ModelSerializer):
         model = Chat
         fields = [
             'id', 'owner', 'receiver', 'content', 'created_at', 'is_read',
-            'is_owner', 'owner_id', 'owner_image', 'receiver_id',
-            'receiver_image'
+            'is_owner', 'owner_id', 'owner_image',
         ]
