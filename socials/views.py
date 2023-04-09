@@ -11,7 +11,7 @@ class SocialList(generics.ListCreateAPIView):
     Create a new social media link if authenticated
     Associate the current logged in user with the social media link
     """
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [IsOwnerOrReadOnly]
     serializer_class = SocialSerializer
     queryset = Social.objects.all()
     filter_backends = [

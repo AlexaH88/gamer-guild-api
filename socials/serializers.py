@@ -7,6 +7,7 @@ class SocialSerializer(serializers.ModelSerializer):
     Social serializer
     """
     owner = serializers.ReadOnlyField(source='owner.username')
+    # profile = serializers.ReadOnlyField(source='profile.id')
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
