@@ -156,7 +156,7 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
     ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png)
 - List View (Read if not logged in):
     ![List View](./docs/readme/images/testing/manual_testing_profiles_list_not_logged_in.png)
-- Detail View (Read, Update, Delete if owner):
+- Detail View (Read, Update if owner):
     ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png)
 - Detail View (Read if not owner):
     ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_owner.png)
