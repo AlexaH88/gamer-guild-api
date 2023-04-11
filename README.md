@@ -13,26 +13,26 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
 
 ## __User Experience (UX)__
 
--   ### ***User stories***
+### ***User stories***
 
-    - In order to fulfill the [User Stories](https://github.com/users/AlexaH88/projects/5) created for this portfolio project, relevant apps and models were created. The following user stories relied on the API specifically:
-    ![API User Stories](./docs/readme/images/ux/user_stories.png)
+- In order to fulfill the [User Stories](https://github.com/users/AlexaH88/projects/5) created for this portfolio project, relevant apps and models were created. The following user stories relied on the API specifically:
+  ![API User Stories](./docs/readme/images/ux/user_stories.png)
 
--   ### ***Entity Relationship Diagram***
+### ***Entity Relationship Diagram***
 
-    - The following Entity Relationship Diagram was created to show the models used. The in-built Django User model was used for this project, and the following custom models were created:
-        - Profile
-        - Follower
-        - Chat
-        - Post
-        - Event
-        - Response
-        - Comment
-        - Like
-        - Attend
+- The following Entity Relationship Diagram was created to show the models used. The in-built Django User model was used for this project, and the following custom models were created:
+  - Profile
+  - Follower
+  - Chat
+  - Post
+  - Event
+  - Response
+  - Comment
+  - Like
+  - Attend
 
-    -   Entity Relationship Diagram:
-        ![Entity Relationship Diagram](./docs/readme/images/ux/entity_relationship_diagram.png)
+-   Entity Relationship Diagram:
+    ![Entity Relationship Diagram](./docs/readme/images/ux/entity_relationship_diagram.png)
 
 
 ## __Technologies Used__
@@ -156,7 +156,7 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
     ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png)
 - List View (Read if not logged in):
     ![List View](./docs/readme/images/testing/manual_testing_profiles_list_not_logged_in.png)
-- Detail View (Read, Update, Delete if owner):
+- Detail View (Read, Update if owner):
     ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png)
 - Detail View (Read if not owner):
     ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_owner.png)
