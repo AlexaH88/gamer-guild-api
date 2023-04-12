@@ -10,12 +10,12 @@ class Like(models.Model):
     """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(
-        Post, on_delete=models.CASCADE, related_name='post_likes', blank=True,
-        null=True
+        Post, on_delete=models.CASCADE, related_name='post_likes',
+        blank=True, null=True
     )
     event = models.ForeignKey(
         Event, on_delete=models.CASCADE, related_name='event_likes',
-        default=1, blank=True, null=True
+        blank=True, null=True
     )
     created_at = models.DateTimeField(auto_now_add=True)
 
