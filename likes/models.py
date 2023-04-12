@@ -25,4 +25,4 @@ class Like(models.Model):
         unique_together = ['owner', 'event']
 
     def __str__(self):
-        return f'{self.owner}'
+        return f'{self.post}' or f'{self.event}'
