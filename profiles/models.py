@@ -20,7 +20,7 @@ class Profile(models.Model):
     youtube = models.URLField(blank=True)
     twitch = models.URLField(blank=True)
     image = models.ImageField(
-        upload_to='images/', default='../default_profile_iu6lgr', blank=True
+        upload_to='images/', default='../default_profile_l8giye', blank=True
     )
 
     class Meta:
