@@ -45,9 +45,5 @@ class CommentDetailSerializer(CommentSerializer):
     """
     Comment detail serializer
     """
-    post = serializers.PrimaryKeyRelatedField(
-        allow_null=True, required=False, queryset=Post.objects.all()
-    )
-    event = serializers.PrimaryKeyRelatedField(
-        allow_null=True, required=False, queryset=Event.objects.all()
-    )
+    post = serializers.ReadOnlyField(source='post.id')
+    event = serializers.ReadOnlyField(source='event.id')
