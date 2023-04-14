@@ -13,7 +13,7 @@ class Event(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
     image = models.ImageField(
-        upload_to='images/', default='../default_event_t6y6sk', blank=True
+        upload_to='images/', default='../default_event_o45bya', blank=True
     )
 
     class Meta:
