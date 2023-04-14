@@ -13,7 +13,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
     image = models.ImageField(
-        upload_to='images/', default='../default_post_xh1cpv', blank=True
+        upload_to='images/', default='../default_post_m4aipf', blank=True
     )
     video = models.URLField(blank=True)
 
