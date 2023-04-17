@@ -50,7 +50,7 @@ class PostSerializer(serializers.ModelSerializer):
         user = self.context['request'].user
         if user.is_authenticated:
             comment = Comment.objects.filter(
-                owner=user, event=obj
+                owner=user, post=obj
                 ).first()
             return comment.id if comment else None
         return None
