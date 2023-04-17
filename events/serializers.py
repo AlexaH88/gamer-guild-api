@@ -2,6 +2,7 @@ from rest_framework import serializers
 from .models import Event
 from likes.models import Like
 from attendees.models import Attend
+from comments.models import Comment
 
 
 class EventSerializer(serializers.ModelSerializer):
@@ -14,6 +15,7 @@ class EventSerializer(serializers.ModelSerializer):
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
     like_id = serializers.SerializerMethodField()
     attend_id = serializers.SerializerMethodField()
+    comment_id = serializers.SerializerMethodField()
     comments_count = serializers.ReadOnlyField()
     likes_count = serializers.ReadOnlyField()
     attendees_count = serializers.ReadOnlyField()
@@ -56,10 +58,20 @@ class EventSerializer(serializers.ModelSerializer):
             return attend.id if attend else None
         return None
 
+    def get_comment_id(self, obj):
+        user = self.context['request'].user
+        if user.is_authenticated:
+            comment = Comment.objects.filter(
+                owner=user, event=obj
+                ).first()
+            return comment.id if comment else None
+        return None
+
     class Meta:
         model = Event
         fields = [
             'id', 'owner', 'created_at', 'updated_at', 'title', 'content',
             'image', 'is_owner', 'profile_id', 'profile_image', 'like_id',
             'attend_id', 'comments_count', 'likes_count', 'attendees_count',
+            'comment_id',
         ]
