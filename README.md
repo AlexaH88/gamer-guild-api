@@ -174,6 +174,21 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
 <!-- - Detail View (Read if not logged in):
     ![Detail View](./docs/readme/images/testing/manual_testing_responses_detail_not_logged_in.png) -->
 
+### ***Fixed Bugs***
+
+-   #### Count Bug
+
+	- The likes, comments, attending counts on the post and event detail view were showing up incorrectly. A newly created post or event would show several likes, comments and attendees despite the fact that the back-end database correctly showed 0, as did the PostsPages and EventsPages.
+		- Detail View:
+		![Detail View](./docs/readme/images/testing/bug_counts_detail_view.png)
+    	- Database:
+    	![Database](./docs/readme/images/testing/bug_counts_database.png)
+
+	- This issue was fixed on the back-end by revising the EventDetail and PostDetail views to be specific to events and posts resepectively and not all the user's likes, comments etc.
+		- Original Code:
+    	![Original Code](./docs/readme/images/testing/bug_counts_original_code.png)
+    	- Fixed Code:
+    	![Fixed Code](./docs/readme/images/testing/bug_counts_fixed_code.png)
 
 [//]: <> (Deployment section taken from Dave Horrocks, and credited in the Content section of the Credits)
 ## __Deployment__
