@@ -13,12 +13,6 @@ class Profile(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     name = models.CharField(max_length=255, blank=True)
     content = models.TextField(blank=True)
-    xbox = models.URLField(blank=True)
-    playstation = models.URLField(blank=True)
-    steam = models.URLField(blank=True)
-    discord = models.URLField(blank=True)
-    youtube = models.URLField(blank=True)
-    twitch = models.URLField(blank=True)
     image = models.ImageField(
         upload_to='images/', default='../default_profile_l8giye', blank=True
     )

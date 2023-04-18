@@ -12,7 +12,6 @@ class ContactList(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Contact.objects.all()
 
-    # use generics in-built perform_create method
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
 
