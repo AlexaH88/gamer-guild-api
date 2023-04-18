@@ -108,18 +108,17 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'profiles',
-    'socials',
     'followers',
     'posts',
     'comments',
     'likes',
+    'groups',
+    'members',
     'events',
     'attendees',
     'chats',
     'responses',
-    'groups',
-    'contacts',
-    'members',
+    
 ]
 
 SITE_ID = 1

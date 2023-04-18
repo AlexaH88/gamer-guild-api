@@ -12,6 +12,10 @@ class Group(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     name = models.CharField(max_length=255)
     about = models.TextField(blank=True)
+    website = models.URLField(blank=True)
+    location = models.TextField(blank=True)
+    phone = models.IntegerField(blank=True)
+    email = models.EmailField(blank=True)
     image = models.ImageField(
         upload_to='images/', default='../default_profile_l8giye', blank=True
     )

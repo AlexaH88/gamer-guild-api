@@ -33,5 +33,6 @@ class ProfileSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'owner', 'created_at', 'updated_at', 'name', 'content',
             'image', 'is_owner', 'following_id', 'posts_count',
-            'followers_count', 'following_count', 'events_count'
+            'followers_count', 'following_count', 'events_count', 'xbox',
+            'playstation', 'steam', 'discord', 'youtube', 'twitch',
         ]
