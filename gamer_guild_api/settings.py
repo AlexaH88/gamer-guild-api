@@ -117,6 +117,7 @@ INSTALLED_APPS = [
     'chats',
     'responses',
     'groups',
+    'contacts',
     'members',
 ]
 
