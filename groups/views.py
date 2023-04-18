@@ -13,7 +13,7 @@ class GroupList(generics.ListCreateAPIView):
     """
     serializer_class = GroupSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    queryset = Profile.objects.annotate(
+    queryset = Group.objects.annotate(
         events_count=Count('owner__event', distinct=True),
         members_count=Count('owner__member', distinct=True),
     ).order_by('-created_at')
@@ -36,7 +36,7 @@ class GroupDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     serializer_class = GroupSerializer
     permission_classes = [IsOwnerOrReadOnly]
-    queryset = Profile.objects.annotate(
+    queryset = Group.objects.annotate(
         events_count=Count('owner__event', distinct=True),
         members_count=Count('owner__member', distinct=True)
     ).order_by('-created_at')
