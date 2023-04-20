@@ -14,8 +14,8 @@ class GroupList(generics.ListCreateAPIView):
     serializer_class = GroupSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Group.objects.annotate(
-        events_count=Count('group__event', distinct=True),
-        members_count=Count('group__member', distinct=True),
+        events_count=Count('owner__event', distinct=True),
+        members_count=Count('owner__group_member', distinct=True),
     ).order_by('-created_at')
     filter_backends = [
         filters.OrderingFilter,
@@ -37,6 +37,6 @@ class GroupDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = GroupSerializer
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Group.objects.annotate(
-        events_count=Count('group__event', distinct=True),
-        members_count=Count('group__member', distinct=True)
+        events_count=Count('owner__event', distinct=True),
+        members_count=Count('owner__group_member', distinct=True)
     ).order_by('-created_at')
