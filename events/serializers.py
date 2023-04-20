@@ -73,5 +73,6 @@ class EventSerializer(serializers.ModelSerializer):
             'id', 'owner', 'created_at', 'updated_at', 'name', 'about',
             'image', 'is_owner', 'profile_id', 'profile_image', 'like_id',
             'attend_id', 'comments_count', 'likes_count', 'attendees_count',
-            'comment_id', 'platform', 'date', 'time', 'duration', 'location',
+            'comment_id', 'platform', 'date', 'start_time', 'end_time',
+            'location',
         ]

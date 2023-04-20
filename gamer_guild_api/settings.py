@@ -42,8 +42,10 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS':
         'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
-    # date time format as 02 Aug 2021 for example
-    'DATETIME_FORMAT': '%d %b %Y'
+    # date and time formats
+    'DATETIME_FORMAT': '%d %b %Y',
+    'DATE_FORMAT': '%d %b %Y',
+    'TIME_FORMAT': '%H:%M',
 }
 
 # render JSON only in production

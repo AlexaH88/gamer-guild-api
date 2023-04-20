@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
-from datetime import date, timedelta
 from django.utils import timezone
+from datetime import date
 
 
 class Event(models.Model):
@@ -16,8 +16,8 @@ class Event(models.Model):
     about = models.TextField(blank=True)
     platform = models.URLField(blank=True)
     date = models.DateField(default=date.today)
-    time = models.TimeField(default=timezone.now)
-    duration = models.DurationField(default=timedelta)
+    start_time = models.TimeField(default=timezone.now)
+    end_time = models.TimeField(default=timezone.now)
     location = models.TextField(blank=True)
     image = models.ImageField(
         upload_to='images/', default='../default_event_dseibs', blank=True
