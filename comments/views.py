@@ -20,8 +20,6 @@ class CommentList(generics.ListCreateAPIView):
     filterset_fields = [
         # get comments on each post
         'post',
-        # get comments on each event
-        'event'
     ]
 
     def perform_create(self, serializer):
