@@ -31,5 +31,5 @@ class GroupSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'owner', 'created_at', 'updated_at', 'name', 'about',
             'image', 'is_owner', 'events_count', 'members_count', 'website',
-            'location', 'phone', 'email',
+            'location', 'phone', 'email', 'member_id',
         ]
