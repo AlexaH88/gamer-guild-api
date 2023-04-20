@@ -15,7 +15,7 @@ class GroupList(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Group.objects.annotate(
         events_count=Count('owner__event', distinct=True),
-        members_count=Count('owner__group_member', distinct=True),
+        members_count=Count('owner__group', distinct=True),
     ).order_by('-created_at')
     filter_backends = [
         filters.OrderingFilter,
@@ -38,5 +38,5 @@ class GroupDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Group.objects.annotate(
         events_count=Count('owner__event', distinct=True),
-        members_count=Count('owner__group_member', distinct=True)
+        members_count=Count('owner__group', distinct=True)
     ).order_by('-created_at')

@@ -8,11 +8,12 @@ class MemberSerializer(serializers.ModelSerializer):
     Member serializer
     """
     owner = serializers.ReadOnlyField(source='owner.username')
+    group_name = serializers.ReadOnlyField(source='group.name')
 
     class Meta:
         model = Member
         fields = [
-            'id', 'owner', 'group', 'created_at',
+            'id', 'owner', 'group', 'created_at', 'group_name',
         ]
 
     def create(self, validated_data):
