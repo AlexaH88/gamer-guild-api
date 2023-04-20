@@ -114,13 +114,8 @@ INSTALLED_APPS = [
     'posts',
     'comments',
     'likes',
-    'groups',
-    'members',
     'events',
-    'attendees',
-    'chats',
-    'responses',
-    
+    'replies',
 ]
 
 SITE_ID = 1

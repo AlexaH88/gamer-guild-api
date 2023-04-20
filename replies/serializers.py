@@ -1,21 +1,21 @@
 from django.db import IntegrityError
 from rest_framework import serializers
-from .models import Member
+from .models import Reply
 
 
-class MemberSerializer(serializers.ModelSerializer):
+class ReplySerializer(serializers.ModelSerializer):
     """
-    Member serializer
+    Reply serializer
     """
     owner = serializers.ReadOnlyField(source='owner.username')
-    group_name = serializers.ReadOnlyField(source='group.name')
 
     class Meta:
-        model = Member
+        model = Reply
         fields = [
-            'id', 'owner', 'group', 'created_at', 'group_name',
+            'id', 'owner', 'event', 'created_at'
         ]
 
+    # check for duplicate reply
     def create(self, validated_data):
         try:
             return super().create(validated_data)

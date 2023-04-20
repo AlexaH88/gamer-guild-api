@@ -3,13 +3,13 @@ from django.contrib.auth.models import User
 from events.models import Event
 
 
-class Attend(models.Model):
+class Reply(models.Model):
     """
-    Attend model, related to Event
+    Reply model, related to Event
     """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     event = models.ForeignKey(
-        Event, on_delete=models.CASCADE, related_name='event_attendees'
+        Event, on_delete=models.CASCADE, related_name='event_replies'
         )
     created_at = models.DateTimeField(auto_now_add=True)
 

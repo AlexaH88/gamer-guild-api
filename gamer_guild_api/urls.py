@@ -16,10 +16,6 @@ urlpatterns = [
     path('', include('posts.urls')),
     path('', include('comments.urls')),
     path('', include('likes.urls')),
-    path('', include('groups.urls')),
-    path('', include('members.urls')),
     path('', include('events.urls')),
-    path('', include('attendees.urls')),
-    path('', include('chats.urls')),
-    path('', include('responses.urls')),
+    path('', include('replies.urls')),
 ]

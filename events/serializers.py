@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Event
-from attendees.models import Attend
+from replies.models import Reply
 
 
 class EventSerializer(serializers.ModelSerializer):
@@ -11,8 +11,8 @@ class EventSerializer(serializers.ModelSerializer):
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
-    attend_id = serializers.SerializerMethodField()
-    attendees_count = serializers.ReadOnlyField()
+    reply_id = serializers.SerializerMethodField()
+    replies_count = serializers.ReadOnlyField()
 
     def validate_image(self, value):
         # check for 2mb file size limit
@@ -34,20 +34,20 @@ class EventSerializer(serializers.ModelSerializer):
         request = self.context['request']
         return request.user == obj.owner
 
-    def get_attend_id(self, obj):
+    def get_reply_id(self, obj):
         user = self.context['request'].user
         if user.is_authenticated:
-            attend = Attend.objects.filter(
+            reply = Reply.objects.filter(
                 owner=user, event=obj
                 ).first()
-            return attend.id if attend else None
+            return reply.id if reply else None
         return None
 
     class Meta:
         model = Event
         fields = [
             'id', 'owner', 'created_at', 'updated_at', 'name', 'about',
-            'image', 'is_owner', 'profile_id', 'profile_image', 'attend_id',
-            'attendees_count', 'platform', 'date', 'start_time', 'end_time',
-            'location',
+            'image', 'is_owner', 'profile_id', 'profile_image', 'platform',
+            'date', 'start_time', 'end_time', 'location', 'replies_count',
+            'reply_id'
         ]
