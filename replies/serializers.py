@@ -12,7 +12,7 @@ class ReplySerializer(serializers.ModelSerializer):
     class Meta:
         model = Reply
         fields = [
-            'id', 'owner', 'event', 'created_at', 'event_choices',
+            'id', 'owner', 'event', 'created_at',
         ]
 
     # check for duplicate reply

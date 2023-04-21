@@ -7,15 +7,9 @@ class Reply(models.Model):
     """
     Reply model, related to Event
     """
-    event_choices = [
-        ('yes', 'Yes'),
-        ('maybe', 'Maybe'),
-        ('no', 'No'),
-    ]
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     event = models.ForeignKey(
-        Event, on_delete=models.CASCADE, related_name='event_replies',
-        choices=event_choices
+        Event, on_delete=models.CASCADE, related_name='replies'
     )
     created_at = models.DateTimeField(auto_now_add=True)
 

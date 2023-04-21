@@ -14,7 +14,8 @@ class EventList(generics.ListCreateAPIView):
     serializer_class = EventSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Event.objects.annotate(
-        replies_count=Count('event_replies', distinct=True)
+        replies_count=Count('replies', distinct=True),
+        polls_count=Count('polls', distinct=True)
     ).order_by('-created_at')
     filter_backends = [
         filters.OrderingFilter,
@@ -23,8 +24,9 @@ class EventList(generics.ListCreateAPIView):
     ]
     # for OrderingFilter
     ordering_fields = [
+        'polls_count',
         'replies_count',
-        'event_replies__created_at'
+        'replies__created_at'
     ]
     # for SearchFilter
     search_fields = [
@@ -51,5 +53,6 @@ class EventDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = EventSerializer
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Event.objects.annotate(
-        replies_count=Count('event_replies', distinct=True)
+        replies_count=Count('replies', distinct=True),
+        polls_count=Count('polls', distinct=True)
     ).order_by('-created_at')
