@@ -13,7 +13,9 @@ class PollSerializer(serializers.ModelSerializer):
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
     created_at = serializers.SerializerMethodField()
     updated_at = serializers.SerializerMethodField()
-    choices = serializers.ChoiceField(choices='poll.response_choices')
+    choices = serializers.ChoiceField(
+        choices='poll.response_choices', label='response_choices'
+        )
 
     def get_is_owner(self, obj):
         request = self.context['request']
