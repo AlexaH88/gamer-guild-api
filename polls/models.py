@@ -7,7 +7,7 @@ class Poll(models.Model):
     """
     Poll model, related to User and Event
     """
-    class Responses(models.TextChoices):
+    class Response(models.TextChoices):
         YES = "Y"
         MAYBE = "M"
         NO = "N"
@@ -17,7 +17,7 @@ class Poll(models.Model):
         Event, on_delete=models.CASCADE, related_name='polls')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    content = models.CharField(max_length=255, choices=Responses.choices)
+    content = models.CharField(max_length=255, choices=Response.choices)
 
     class Meta:
         ordering = ['-created_at']
