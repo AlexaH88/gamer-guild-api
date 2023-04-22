@@ -26,7 +26,12 @@ class EventList(generics.ListCreateAPIView):
     ordering_fields = [
         'polls_count',
         'replies_count',
-        'replies__created_at'
+        'replies__created_at',
+        'owner__followed__owner__profile'
+    ]
+    # default ordering
+    ordering = [
+        'owner__followed__owner__profile'
     ]
     # for SearchFilter
     search_fields = [
