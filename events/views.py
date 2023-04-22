@@ -29,10 +29,6 @@ class EventList(generics.ListCreateAPIView):
         'replies__created_at',
         'owner__followed__owner__profile'
     ]
-    # default ordering
-    ordering = [
-        'owner__followed__owner__profile'
-    ]
     # for SearchFilter
     search_fields = [
         'owner__username',
