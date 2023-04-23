@@ -19,4 +19,5 @@ urlpatterns = [
     path('', include('events.urls')),
     path('', include('replies.urls')),
     path('', include('polls.urls')),
+    path('', include('votes.urls')),
 ]
