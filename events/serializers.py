@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Event
 from replies.models import Reply
+from polls.models import Poll
 
 
 class EventSerializer(serializers.ModelSerializer):
@@ -13,6 +14,8 @@ class EventSerializer(serializers.ModelSerializer):
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
     reply_id = serializers.SerializerMethodField()
     replies_count = serializers.ReadOnlyField()
+    poll_id = serializers.SerializerMethodField()
+    polls_count = serializers.ReadOnlyField()
 
     def validate_image(self, value):
         # check for 2mb file size limit
@@ -43,11 +46,20 @@ class EventSerializer(serializers.ModelSerializer):
             return reply.id if reply else None
         return None
 
+    def get_poll_id(self, obj):
+        user = self.context['request'].user
+        if user.is_authenticated:
+            poll = Poll.objects.filter(
+                owner=user, event=obj
+                ).first()
+            return poll.id if poll else None
+        return None
+
     class Meta:
         model = Event
         fields = [
             'id', 'owner', 'created_at', 'updated_at', 'name', 'about',
             'image', 'is_owner', 'profile_id', 'profile_image', 'platform',
             'date', 'start_time', 'end_time', 'location', 'replies_count',
-            'reply_id'
+            'reply_id', 'poll_id', 'polls_count',
         ]
