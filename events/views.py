@@ -27,7 +27,7 @@ class EventList(generics.ListCreateAPIView):
         'replies_count',
         'polls_count',
         'replies__created_at',
-        'polls_created_at',
+        'polls__created_at',
         'owner__followed__owner__profile'
     ]
     # for SearchFilter
