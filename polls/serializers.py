@@ -11,6 +11,8 @@ class PollSerializer(serializers.ModelSerializer):
     is_owner = serializers.SerializerMethodField()
     created_at = serializers.SerializerMethodField()
     updated_at = serializers.SerializerMethodField()
+    vote_id = serializers.SerializerMethodField()
+    votes_count = serializers.ReadOnlyField()
 
     def get_is_owner(self, obj):
         request = self.context['request']
@@ -27,7 +29,7 @@ class PollSerializer(serializers.ModelSerializer):
         model = Poll
         fields = [
             'id', 'owner', 'event', 'created_at', 'updated_at',
-            'question', 'is_owner',
+            'question', 'is_owner', 'vote_id', 'votes_count',
         ]
 
 
