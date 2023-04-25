@@ -13,6 +13,7 @@ class PollSerializer(serializers.ModelSerializer):
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
     created_at = serializers.SerializerMethodField()
     updated_at = serializers.SerializerMethodField()
+    choices = serializers.SerializerMethodField(source='get_choices_display')
 
     def get_is_owner(self, obj):
         request = self.context['request']
@@ -25,12 +26,15 @@ class PollSerializer(serializers.ModelSerializer):
     def get_updated_at(self, obj):
         return naturaltime(obj.updated_at)
 
+    def get_choices_display(self, obj):
+        return obj.get_choices_display
+
     class Meta:
         model = Poll
         fields = [
             'id', 'owner', 'event', 'created_at', 'updated_at',
             'content', 'content_choices', 'is_owner', 'profile_id',
-            'profile_image'
+            'profile_image', 'choices',
         ]
 
 
