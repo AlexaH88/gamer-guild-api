@@ -22,7 +22,7 @@ class Event(models.Model):
     organiser = models.CharField(max_length=255, blank=True)
     email = models.EmailField(blank=True)
     website = models.URLField(blank=True)
-    phone = models.PositiveIntegerField(blank=True)
+    phone = models.PositiveIntegerField(blank=True, null=True)
     address = models.TextField(blank=True)
     image = models.ImageField(
         upload_to='images/', default='../default_event_dseibs', blank=True
