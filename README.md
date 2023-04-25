@@ -1,15 +1,14 @@
 <h1 align="center">Gamer Guild API</h1>
 
-The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/AlexaH88/gamer-guild) React app. The API includes the following apps, allowing for a rich database and a versatile front-end application:
+The [Gamer Guild API](https://gamer-guild-api.herokuapp.com/) was created to serve the [Gamer Guild](https://github.com/AlexaH88/gamer-guild) React app. The API includes the following apps, allowing for a rich database and a versatile front-end application:
 - profiles
 - followers
-- chats
 - posts
-- events
-- responses
-- comments
 - likes
-- attends
+- comments
+- events
+- replies
+- polls
 
 ## __User Experience (UX)__
 
@@ -23,13 +22,12 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
 - The following Entity Relationship Diagram was created to show the models used. The in-built Django User model was used for this project, and the following custom models were created:
   - Profile
   - Follower
-  - Chat
   - Post
-  - Event
-  - Response
-  - Comment
   - Like
-  - Attend
+  - Comment
+  - Event
+  - Reply
+  - Poll
 
 -   Entity Relationship Diagram:
     ![Entity Relationship Diagram](./docs/readme/images/ux/entity_relationship_diagram.png)
@@ -176,7 +174,7 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
 
 ### ***Fixed Bugs***
 
--   #### Count Bug
+<!-- -   #### Count Bug
 
 	- The likes, comments, attending counts on the post and event detail view were showing up incorrectly. A newly created post or event would show several likes, comments and attendees despite the fact that the back-end database correctly showed 0, as did the PostsPages and EventsPages.
 		- Detail View:
@@ -188,7 +186,7 @@ The Gamer Guild API was created to serve the [Gamer Guild](https://github.com/Al
 		- Original Code:
     	![Original Code](./docs/readme/images/testing/bug_counts_original_code.png)
     	- Fixed Code:
-    	![Fixed Code](./docs/readme/images/testing/bug_counts_fixed_code.png)
+    	![Fixed Code](./docs/readme/images/testing/bug_counts_fixed_code.png) -->
 
 [//]: <> (Deployment section taken from Dave Horrocks, and credited in the Content section of the Credits)
 ## __Deployment__
