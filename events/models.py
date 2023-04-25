@@ -19,6 +19,11 @@ class Event(models.Model):
     start_time = models.TimeField(default=timezone.now)
     end_time = models.TimeField(default=timezone.now)
     location = models.TextField(blank=True)
+    organiser = models.CharField(max_length=255, blank=True)
+    email = models.EmailField(blank=True)
+    website = models.URLField(blank=True)
+    phone = models.PositiveIntegerField(blank=True, default='123456')
+    address = models.TextField(blank=True)
     image = models.ImageField(
         upload_to='images/', default='../default_event_dseibs', blank=True
     )

@@ -61,5 +61,6 @@ class EventSerializer(serializers.ModelSerializer):
             'id', 'owner', 'created_at', 'updated_at', 'name', 'about',
             'image', 'is_owner', 'profile_id', 'profile_image', 'platform',
             'date', 'start_time', 'end_time', 'location', 'replies_count',
-            'reply_id', 'poll_id', 'polls_count',
+            'reply_id', 'poll_id', 'polls_count', 'organiser', 'address',
+            'email', 'website', 'phone',
         ]
