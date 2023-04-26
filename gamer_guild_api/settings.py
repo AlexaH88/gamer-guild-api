@@ -44,7 +44,6 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10,
     # date and time formats
     'DATETIME_FORMAT': '%d %b %Y',
-    'DATE_FORMAT': '%d/%m/%Y',
     'TIME_FORMAT': '%H:%M',
 }
 
