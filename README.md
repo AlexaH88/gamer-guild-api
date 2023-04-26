@@ -186,7 +186,7 @@ The [Gamer Guild API](https://gamer-guild-api.herokuapp.com/) was created to ser
 
 - In order to avoid this issue, the date format was reverted to the required `yyyy-MM-dd` format. As a future implementation, a workaround could be to convert the format from one to the other with JavaScript as required.
 
-#### Database Bugs
+#### Database Bugs:
 - I had recurring bugs with my database, with there being a disconnect between the migrated models and existing data in the database.
 
 - As an example, I would get a ProgrammingError, saying that `content` on `polls` didn't exist:
@@ -276,4 +276,4 @@ Massive thanks to:
 
 - Tutor Support, Student Care and the Slack Community at [Code Institute](https://codeinstitute.net/global/) for their support.
 
-- And last but not least, my fiancé [Antoine Masson](https://www.linkedin.com/in/antoine-masson-55b65094/) for helping me through the stressful moments and for supporting us financially while I make this big career change. 
+- And last but not least, my husband [Antoine Masson](https://www.linkedin.com/in/antoine-masson-55b65094/) for helping me through the stressful moments and for supporting us financially while I make this big career change. 
