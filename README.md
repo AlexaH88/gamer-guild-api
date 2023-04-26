@@ -176,19 +176,15 @@ The [Gamer Guild API](https://gamer-guild-api.herokuapp.com/) was created to ser
 
 ### ***Fixed Bugs***
 
-<!-- -   #### Count Bug
+#### Event Date Bug:
+- When editing an event on the front-end app via the EventEditForm the date field was not populated with the existing date previously created by the user via the EventCreateForm. 
 
-	- The likes, comments, attending counts on the post and event detail view were showing up incorrectly. A newly created post or event would show several likes, comments and attendees despite the fact that the back-end database correctly showed 0, as did the PostsPages and EventsPages.
-		- Detail View:
-		![Detail View](./docs/readme/images/testing/bug_counts_detail_view.png)
-    	- Database:
-    	![Database](./docs/readme/images/testing/bug_counts_database.png)
+- On further inspection in the console, this error was caused by the date format not being the same as the form required, as I had applied a DATE_FORMAT in the back-end API settings to make the date more human-friendly and readable e.g. 01/05/2023. 
+![Event Dates Bug](./docs/readme/images/testing/bug_date_events.png)
 
-	- This issue was fixed on the back-end by revising the EventDetail and PostDetail views to be specific to events and posts resepectively and not all the user's likes, comments etc.
-		- Original Code:
-    	![Original Code](./docs/readme/images/testing/bug_counts_original_code.png)
-    	- Fixed Code:
-    	![Fixed Code](./docs/readme/images/testing/bug_counts_fixed_code.png) -->
+- As [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date) states, this format comes from the browser and can not be changed. 
+
+- In order to avoid this issue, the date format was reverted to the required `yyyy-MM-dd` format. As a future implementation, a workaround could be to convert the format from one to the other with JavaScript as required. 
 
 [//]: <> (Deployment section taken from Dave Horrocks, and credited in the Content section of the Credits)
 ## __Deployment__
