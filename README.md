@@ -32,7 +32,6 @@ The [Gamer Guild API](https://gamer-guild-api.herokuapp.com/) was created to ser
 -   Entity Relationship Diagram:
     ![Entity Relationship Diagram](./docs/readme/images/ux/entity_relationship_diagram.png)
 
-
 ## __Technologies Used__
 
 ### ***Languages Used***
@@ -60,7 +59,6 @@ The [Gamer Guild API](https://gamer-guild-api.herokuapp.com/) was created to ser
 
 1. [Heroku:](https://heroku.com/)
     - Heroku was used for the deployed application.
-
 
 ## __Testing__
 
