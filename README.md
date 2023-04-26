@@ -184,7 +184,20 @@ The [Gamer Guild API](https://gamer-guild-api.herokuapp.com/) was created to ser
 
 - As [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date) states, this format comes from the browser and can not be changed. 
 
-- In order to avoid this issue, the date format was reverted to the required `yyyy-MM-dd` format. As a future implementation, a workaround could be to convert the format from one to the other with JavaScript as required. 
+- In order to avoid this issue, the date format was reverted to the required `yyyy-MM-dd` format. As a future implementation, a workaround could be to convert the format from one to the other with JavaScript as required.
+
+#### Database Bugs
+- I had recurring bugs with my database, with there being a disconnect between the migrated models and existing data in the database.
+
+- As an example, I would get a ProgrammingError, saying that `content` on `polls` didn't exist:
+![Programming Error Bug](./docs/readme/images/testing/bug_programming_error.png)
+
+- However, when checking the database, the `content` field on `polls` did indeed exist:
+![Database Existing Fields](./docs/readme/images/testing/bug_exisitng_fields.png)
+
+- The solution ultimately was to either reset the database on [Elephant SQL](https://www.elephantsql.com/) or delete it entirely, create a new instance and connect it up to the API via env.py and Heroku config vars. Followed by migrating all the models again, and deploying to Heroku. 
+
+- This re-ocurring issue caused a lot of time to be wasted both on having to reset the database and recreate the lost data.
 
 [//]: <> (Deployment section taken from Dave Horrocks, and credited in the Content section of the Credits)
 ## __Deployment__
