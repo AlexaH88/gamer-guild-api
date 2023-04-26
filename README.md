@@ -74,83 +74,8 @@ The [Gamer Guild API](https://gamer-guild-api.herokuapp.com/) was created to ser
 
 - Manual testing was performed throughout development, ensuring the database was being updated as expected when creating, reading, updating or deleting data, where appropriate.
 
-#### **Attendees App**
-- List View (Read, Create if logged in):
-    ![List View](./docs/readme/images/testing/manual_testing_attendees_list_logged_in.png)
-- List View (Read if not logged in):
-    ![List View](./docs/readme/images/testing/manual_testing_attendees_list_not_logged_in.png)
-- Detail View (Read, Delete if owner):
-    ![Detail View](./docs/readme/images/testing/manual_testing_attendees_detail_owner.png)
-- Detail View (Read if not owner):
-    ![Detail View](./docs/readme/images/testing/manual_testing_attendees_detail_not_owner.png)
-- Detail View (Read if not logged in):
-    ![Detail View](./docs/readme/images/testing/manual_testing_attendees_detail_not_logged_in.png)
-#### **Chats App**
-<!-- - List View (Read if logged in):
-    ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png)
-- List View (Read if not logged in):
-    ![List View](./docs/readme/images/testing/manual_testing_profiles_list_not_logged_in.png)
-- Detail View (Read, Update, Delete if owner):
-    ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png)
-- Detail View (Read if not owner):
-    ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_owner.png) -->
-<!-- - Detail View (Read if not logged in):
-    ![Detail View](./docs/readme/images/testing/manual_testing_attendees_detail_not_logged_in.png) -->
-#### **Comments App**
-- List View (Read, Create if logged in):
-    ![List View](./docs/readme/images/testing/manual_testing_comments_list_logged_in.png)
-- List View (Read if not logged in):
-    ![List View](./docs/readme/images/testing/manual_testing_comments_list_not_logged_in.png)
-- Detail View (Read, Update, Delete if owner):
-    ![Detail View](./docs/readme/images/testing/manual_testing_comments_detail_owner.png)
-- Detail View (Read if not owner):
-    ![Detail View](./docs/readme/images/testing/manual_testing_comments_detail_not_owner.png)
-- Detail View (Read if not logged in):
-    ![Detail View](./docs/readme/images/testing/manual_testing_comments_detail_not_logged_in.png)
-#### **Events App**
-- List View (Read, Create if logged in):
-    ![List View](./docs/readme/images/testing/manual_testing_events_list_logged_in.png)
-- List View (Read if not logged in):
-    ![List View](./docs/readme/images/testing/manual_testing_events_list_not_logged_in.png)
-- Detail View (Read, Update, Delete if owner):
-    ![Detail View](./docs/readme/images/testing/manual_testing_events_detail_owner.png)
-- Detail View (Read if not owner):
-    ![Detail View](./docs/readme/images/testing/manual_testing_events_detail_not_owner.png)
-- Detail View (Read if not logged in):
-    ![Detail View](./docs/readme/images/testing/manual_testing_events_detail_not_logged_in.png)
-#### **Followers App**
-- List View (Read, Create if logged in):
-    ![List View](./docs/readme/images/testing/manual_testing_followers_list_logged_in.png)
-- List View (Read if not logged in):
-    ![List View](./docs/readme/images/testing/manual_testing_followers_list_not_logged_in.png)
-- Detail View (Read, Delete if owner):
-    ![Detail View](./docs/readme/images/testing/manual_testing_followers_detail_owner.png)
-- Detail View (Read if not owner):
-    ![Detail View](./docs/readme/images/testing/manual_testing_followers_detail_not_owner.png)
-- Detail View (Read if not logged in):
-    ![Detail View](./docs/readme/images/testing/manual_testing_followers_detail_not_logged_in.png)
-#### **Likes App**
-- List View (Read, Create if logged in):
-    ![List View](./docs/readme/images/testing/manual_testing_likes_list_logged_in.png)
-- List View (Read if not logged in):
-    ![List View](./docs/readme/images/testing/manual_testing_likes_list_not_logged_in.png)
-- Detail View (Read, Delete if owner):
-    ![Detail View](./docs/readme/images/testing/manual_testing_likes_detail_owner.png)
-- Detail View (Read if not owner):
-    ![Detail View](./docs/readme/images/testing/manual_testing_likes_detail_not_owner.png)
-- Detail View (Read if not logged in):
-    ![Detail View](./docs/readme/images/testing/manual_testing_likes_detail_not_logged_in.png)
-#### **Posts App**
-- List View (Read, Create if logged in):
-    ![List View](./docs/readme/images/testing/manual_testing_posts_list_logged_in.png)
-- List View (Read if not logged in):
-    ![List View](./docs/readme/images/testing/manual_testing_posts_list_not_logged_in.png)
-- Detail View (Read, Update, Delete if owner):
-    ![Detail View](./docs/readme/images/testing/manual_testing_posts_detail_owner.png)
-- Detail View (Read if not owner):
-    ![Detail View](./docs/readme/images/testing/manual_testing_posts_detail_not_owner.png)
-- Detail View (Read if not logged in):
-    ![Detail View](./docs/readme/images/testing/manual_testing_posts_detail_not_logged_in.png)
+- Screenshots are provided for the Profiles app, testing was carried out equally for all other apps, and is noted below. 
+
 #### **Profiles App**
 - List View (Read if logged in):
     ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png)
@@ -162,17 +87,55 @@ The [Gamer Guild API](https://gamer-guild-api.herokuapp.com/) was created to ser
     ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_owner.png)
 - Detail View (Read if not logged in):
     ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_logged_in.png)
-#### **Responses App**
-<!-- - List View (Read, Create if logged in):
-    ![List View](./docs/readme/images/testing/manual_testing_profiles_list_logged_in.png) -->
-<!-- - List View (Read if not logged in):
-    ![List View](./docs/readme/images/testing/manual_testing_responses_list_not_logged_in.png) -->
-<!-- - Detail View (Read, Update, Delete if owner):
-    ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_owner.png) -->
-<!-- - Detail View (Read if not owner):
-    ![Detail View](./docs/readme/images/testing/manual_testing_profiles_detail_not_owner.png) -->
-<!-- - Detail View (Read if not logged in):
-    ![Detail View](./docs/readme/images/testing/manual_testing_responses_detail_not_logged_in.png) -->
+
+#### **Followers App**
+- List View (Read, Create if logged in)
+- List View (Read if not logged in)
+- Detail View (Read, Delete if owner)
+- Detail View (Read if not owner)
+- Detail View (Read if not logged in)
+
+#### **Posts App**
+- List View (Read, Create if logged in)
+- List View (Read if not logged in)
+- Detail View (Read, Update, Delete if owner)
+- Detail View (Read if not owner)
+- Detail View (Read if not logged in)
+
+#### **Likes App**
+- List View (Read, Create if logged in)
+- List View (Read if not logged in)
+- Detail View (Read, Delete if owner)
+- Detail View (Read if not owner)
+- Detail View (Read if not logged in)
+
+#### **Comments App**
+- List View (Read, Create if logged in)
+- List View (Read if not logged in)
+- Detail View (Read, Update, Delete if owner)
+- Detail View (Read if not owner)
+- Detail View (Read if not logged in)
+
+#### **Events App**
+- List View (Read, Create if logged in)
+- List View (Read if not logged in)
+- Detail View (Read, Update, Delete if owner)
+- Detail View (Read if not owner)
+- Detail View (Read if not logged in)
+
+#### **Replies App**
+- List View (Read, Create if logged in)
+- List View (Read if not logged in)
+- Detail View (Read, Delete if owner)
+- Detail View (Read if not owner)
+- Detail View (Read if not logged in)
+
+#### **Polls App**
+- List View (Read, Create if logged in)
+- List View (Read if not logged in)
+- Detail View (Read, Update, Delete if owner)
+- Detail View (Read if not owner)
+- Detail View (Read if not logged in)
 
 ### ***Fixed Bugs***
 
