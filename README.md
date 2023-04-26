@@ -40,9 +40,11 @@ The [Gamer Guild API](https://gamer-guild-api.herokuapp.com/) was created to ser
 -   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ### ***Frameworks, Libraries & Programs Used***
+1. [Django:](https://www.djangoproject.com/)
+    - Django was used to create the web application.
 
 1. [Django Rest Framework:](https://www.django-rest-framework.org/)
-    - The Django web framework was used to create the web API.
+    - The Django rest framework was used to simplify the process between the back and front ends.
 
 1. [PostgreSQL:](https://en.wikipedia.org/wiki/PostgreSQL)
     - PostgreSQL was used as the object-relational database system.
