@@ -23,6 +23,7 @@ class Event(models.Model):
     email = models.EmailField(blank=True)
     website = models.URLField(blank=True)
     phone = models.PositiveIntegerField(blank=True, null=True)
+    phone_number = models.CharField(max_length=25, default='123456')
     address = models.TextField(blank=True)
     image = models.ImageField(
         upload_to='images/', default='../default_event_ixlmh0', blank=True
