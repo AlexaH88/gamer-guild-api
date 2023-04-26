@@ -25,7 +25,7 @@ class Event(models.Model):
     phone = models.PositiveIntegerField(blank=True, null=True)
     address = models.TextField(blank=True)
     image = models.ImageField(
-        upload_to='images/', default='../default_post_xh1cpv', blank=True 
+        upload_to='images/', default='../default_event_ixlmh0', blank=True
     )
 
     class Meta:
