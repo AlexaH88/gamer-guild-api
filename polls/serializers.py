@@ -26,9 +26,6 @@ class PollSerializer(serializers.ModelSerializer):
     def get_updated_at(self, obj):
         return naturaltime(obj.updated_at)
 
-    def get_choices_display(self, obj):
-        return obj.get_choices_display()
-
     class Meta:
         model = Poll
         fields = [
