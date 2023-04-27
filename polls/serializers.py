@@ -29,8 +29,7 @@ class PollSerializer(serializers.ModelSerializer):
         model = Poll
         fields = [
             'id', 'owner', 'event', 'created_at', 'updated_at',
-            'content', 'is_owner', 'profile_id', 'profile_image',
-            'choices',
+            'content', 'is_owner', 'profile_id', 'profile_image'
         ]
 
 
