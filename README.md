@@ -160,6 +160,22 @@ The [Gamer Guild API](https://gamer-guild-api.herokuapp.com/) was created to ser
 
 - This re-ocurring issue caused a lot of time to be wasted both on having to reset the database and recreate the lost data.
 
+### ***Known Bugs***
+
+#### Poll and Discussion Bug
+- A poll and discussion model were created on the back-end to be used with events. Though the back-end functionality exists and doesn't cause any issues, the front-end functionality was impossible to implement. My assumption was that the choice fields on polls was causing an issue and that my front-end code was not correct. However, when implementing the discussion on events, which is identical to comments on posts, the same error appeared and nothing could be done about it.
+
+- Recurring front-end TypeError:
+    ![Poll Bug Error](/docs/readme/images/testing/bug_poll_error.png)
+
+- Front-end displaying data correctly when created in the back-end:
+    ![Poll Bug Back End Data](/docs/readme/images/testing/bug_poll_back_end_data.png)
+
+- Ability to create the data in the back-end: 
+    ![Poll Bug Back End Functionality](/docs/readme/images/testing/bug_poll_back_end_functionality.png)
+
+- Ultimately the poll and discussion functionality was therefore removed.
+
 [//]: <> (Deployment section taken from Dave Horrocks, and credited in the Content section of the Credits)
 ## __Deployment__
 
