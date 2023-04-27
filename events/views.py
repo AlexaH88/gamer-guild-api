@@ -16,6 +16,7 @@ class EventList(generics.ListCreateAPIView):
     queryset = Event.objects.annotate(
         replies_count=Count('replies', distinct=True),
         polls_count=Count('polls', distinct=True),
+        discussions_count=Count('discussions', distinct=True),
     ).order_by('-created_at')
     filter_backends = [
         filters.OrderingFilter,
@@ -26,8 +27,10 @@ class EventList(generics.ListCreateAPIView):
     ordering_fields = [
         'replies_count',
         'polls_count',
+        'discussions_count',
         'replies__created_at',
         'polls__created_at',
+        'discussions__created_at',
         'owner__followed__owner__profile'
     ]
     # for SearchFilter
@@ -57,4 +60,5 @@ class EventDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Event.objects.annotate(
         replies_count=Count('replies', distinct=True),
         polls_count=Count('polls', distinct=True),
+        discussions_count=Count('discussions', distinct=True),
     ).order_by('-created_at')

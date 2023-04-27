@@ -18,5 +18,6 @@ urlpatterns = [
     path('', include('likes.urls')),
     path('', include('events.urls')),
     path('', include('replies.urls')),
+    path('', include('discussions.urls')),
     path('', include('polls.urls')),
 ]

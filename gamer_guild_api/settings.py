@@ -129,6 +129,7 @@ INSTALLED_APPS = [
     'likes',
     'events',
     'replies',
+    'discussions',
     'polls',
 ]
 
