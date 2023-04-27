@@ -8,7 +8,7 @@ The [Gamer Guild API](https://gamer-guild-api.herokuapp.com/) was created to ser
 - comments
 - events
 - replies
-- polls
+- polls (this model could ultimately not be implemented on the front-end)
 
 ## __User Experience (UX)__
 
@@ -27,7 +27,7 @@ The [Gamer Guild API](https://gamer-guild-api.herokuapp.com/) was created to ser
   - Comment
   - Event
   - Reply
-  - Poll
+  - Poll (this model could ultimately not be implemented on the front-end)
 
 -   Entity Relationship Diagram:
     ![Entity Relationship Diagram](./docs/readme/images/ux/entity_relationship_diagram.png)
