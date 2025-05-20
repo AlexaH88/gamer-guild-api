@@ -1,6 +1,6 @@
 <h1 align="center">Gamer Guild API</h1>
 
-The [Gamer Guild API](https://gamer-guild-api.herokuapp.com/) was created to serve the [Gamer Guild](https://github.com/AlexaH88/gamer-guild) React app. The API includes the following apps, allowing for a rich database and a versatile front-end application:
+The [Gamer Guild API](https://gamer-guild-api.onrender.com) was created to serve the [Gamer Guild](https://gamer-guild.onrender.com) React app. The API includes the following apps, allowing for a rich database and a versatile front-end application:
 - profiles
 - followers
 - posts
